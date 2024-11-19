@@ -38,7 +38,7 @@ namespace e_commerce.Repositories.Product_Repository
                 { 
                     product.Category = validCategory;
                     product.CategoryId = validCategory.Id;
-                    await _context.Products.AddAsync(product);
+                    //await _context.Products.AddAsync(product);
                     await _context.SaveChangesAsync();
                 }
             }

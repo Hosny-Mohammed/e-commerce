@@ -128,10 +128,9 @@ namespace e_commerce.Repositories.User_Repository
         {
             var user = await _context.Users.FindAsync(id);  
             if (user == null) return false;
-            {
-                user.Email = dto.Email;
-                user.Password = dto.Password;
-            }
+            user.Username = dto.Username;
+            user.Email = dto.Email;
+            user.Password = dto.Password;
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
 
